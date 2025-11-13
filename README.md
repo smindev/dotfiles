@@ -1,0 +1,2 @@
+# dotfiles
+Neovim + tmux config
