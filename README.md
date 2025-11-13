@@ -19,17 +19,16 @@ bindings = [
 ### tmux
 
 ```
-unbind C-b
-set-option -g prefix C-a
-bind-key C-a send-prefix
+# Kill pane without confirmation
+unbind x
+bind x confirm-before -p "kill-pane #P? (y/n)" kill-pane
 
-bind-key C-w run-shell "~/.config/tmux/scripts/session-menu.sh"
+# Extra: prefix + X = kill-pane WITHOUT confirmation (instant)
+bind X if-shell '[ "$(tmux list-panes | wc -l)" -gt 1 ]' 'kill-pane' 'kill-window'
 
 # Screen splitting
-bind 'N' new-window -c "#{pane_current_path}"
-bind '_' split-window -c "#{pane_current_path}"
-bind '|' split-window -h -c "#{pane_current_path}"
-bind-key x kill-pane
+bind - split-window -v -c "#{pane_current_path}"
+bind | split-window -h -c "#{pane_current_path}"
 
 # Pane resizing
 bind -r h resize-pane -L 5
