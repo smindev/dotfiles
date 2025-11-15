@@ -645,7 +645,7 @@ map("n", prefix .. "bf", function()
   vim.notify("Revealed in Finder: " .. path, vim.log.levels.INFO)
 end, { desc = "Reveal buffer in Finder (macOS)" })
 
--- open current buffer in text edit on mac
+-- open current buffer in TextEdit on mac
 local function printfile()
   local file = vim.fn.expand("%:p")
   if vim.fn.has("macunix") == 1 then
