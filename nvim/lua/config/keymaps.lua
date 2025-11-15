@@ -240,7 +240,6 @@ map("n", prefix .. "t0", function()
 end, { desc = "Mark it [x]" })
 
 vim.keymap.set("n", prefix .. "td", ":Today<CR>", { desc = "Insert Today's Log" })
-vim.keymap.set("n", prefix .. "tw", ":Week<CR>", { desc = "Insert This Week's Plan" })
 vim.keymap.set("n", prefix .. "tn", ":NewTask<CR>", { desc = "Insert New Task" })
 
 vim.keymap.set("n", prefix .. "t4", function()
@@ -645,3 +644,22 @@ map("n", prefix .. "bf", function()
   vim.fn.system({ "open", "-R", path })
   vim.notify("Revealed in Finder: " .. path, vim.log.levels.INFO)
 end, { desc = "Reveal buffer in Finder (macOS)" })
+
+-- open current buffer in text edit on mac
+local function printfile()
+  local file = vim.fn.expand("%:p")
+  if vim.fn.has("macunix") == 1 then
+    -- Open file in TextEdit and show print dialog
+    vim.fn.system({ "open", "-a", "TextEdit", file })
+    vim.notify("Opened in TextEdit. Use File → Print to save as PDF.", vim.log.levels.INFO)
+  elseif vim.fn.has("unix") == 1 then
+    vim.notify("Print dialog not supported on Linux from Neovim.", vim.log.levels.ERROR)
+  elseif vim.fn.has("win32") == 1 then
+    vim.fn.system({ "powershell", "-Command", "Start-Process", file, "-Verb", "Print" })
+    vim.notify("Opened print dialog (Windows).", vim.log.levels.INFO)
+  else
+    vim.notify("Printing not supported on this OS", vim.log.levels.ERROR)
+  end
+end
+
+map("n", prefix .. "p", printfile, { desc = "Print current buffer" })
