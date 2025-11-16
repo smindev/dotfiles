@@ -15,7 +15,6 @@ local function insert_today()
 ## 🧠 1. Focus Goal of the Day
 - [ ] Main objective:
 
----
 
 ## 📱 2. Indie App Development
 - [ ] Feature 1:
@@ -23,7 +22,6 @@ local function insert_today()
 - [ ] Bug fixes:
 - [ ] App Store tasks:
 
----
 
 ## 🤖 3. AI / ML Learning
 **Today's learning topic:**  
@@ -31,14 +29,12 @@ local function insert_today()
 - [ ] Practice / Code:
 - [ ] Notes:
 
----
 
 ## 💼 4. Client Web Dev Work
 - [ ] Task 1:
 - [ ] Task 2:
 - [ ] Delivery notes:
 
----
 
 ## 📣 5. Marketing / Growth
 - [ ] Social post / Tweet:
@@ -46,14 +42,12 @@ local function insert_today()
 - [ ] Share progress:
 - [ ] Email / Outreach:
 
----
 
 ## 🧹 6. Personal Admin
 - [ ] Finance:
 - [ ] Planning:
 - [ ] Errands:
 
----
 
 ## 🏃 7. Health & Habits
 - [ ] Workout:
@@ -62,14 +56,12 @@ local function insert_today()
 - [ ] Water (8 glasses):
 - [ ] Sleep hours:
 
----
 
 ## 📝 8. Notes / Journal
 - What happened today?
 - What did you learn?
 - What to improve tomorrow?
 
----
 
 ## 🌟 9. End-of-Day Review
 - [ ] Did I complete the focus goal?
