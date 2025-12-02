@@ -8,66 +8,24 @@ local function insert_today()
   local daily_file = notes_dir .. date .. "-daily.md"
   local today_header = "## " .. date
 
-  -- Full daily planner template
+  -- Minimal daily template focused on essentials
   local template = string.format(
     [[%s
 
-## 🧠 1. Focus Goal of the Day
-- [ ] Main objective:
+## Top 1 Goal
+- [ ]
 
+## Three Tasks
+- [ ]
+- [ ]
+- [ ]
 
-## 📱 2. Indie App Development
-- [ ] Feature 1:
-- [ ] Feature 2:
-- [ ] Bug fixes:
-- [ ] App Store tasks:
+## Notes
+-
 
-
-## 🤖 3. AI / ML Learning
-**Today's learning topic:**  
-- [ ] Watch/Read:
-- [ ] Practice / Code:
-- [ ] Notes:
-
-
-## 💼 4. Client Web Dev Work
-- [ ] Task 1:
-- [ ] Task 2:
-- [ ] Delivery notes:
-
-
-## 📣 5. Marketing / Growth
-- [ ] Social post / Tweet:
-- [ ] Blog update:
-- [ ] Share progress:
-- [ ] Email / Outreach:
-
-
-## 🧹 6. Personal Admin
-- [ ] Finance:
-- [ ] Planning:
-- [ ] Errands:
-
-
-## 🏃 7. Health & Habits
-- [ ] Workout:
-- [ ] Walk:
-- [ ] Stretch:
-- [ ] Water (8 glasses):
-- [ ] Sleep hours:
-
-
-## 📝 8. Notes / Journal
-- What happened today?
-- What did you learn?
-- What to improve tomorrow?
-
-
-## 🌟 9. End-of-Day Review
-- [ ] Did I complete the focus goal?
-- [ ] Win of the day:
-- [ ] What slowed me down?
-- [ ] Tomorrow’s top 1 goal:
+## End of Day
+- [ ] Top 1 done?
+- Tomorrow’s top 1:
 ]],
     today_header
   )
