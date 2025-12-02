@@ -20,6 +20,9 @@ local function insert_today()
 - [ ]
 - [ ]
 
+## Non-negotiable Habit
+- [ ]
+
 ## Notes
 -
 
